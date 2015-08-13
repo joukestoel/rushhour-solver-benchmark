@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<title>Rush Hour</title>
+	<link rel="stylesheet" type="text/css" href="rushhour.css">
+
+	<script type="text/javascript" src="images.js"></script>
+	<script type="text/javascript" src="rushhour.js"></script>
+	<script type="text/javascript" src="rushhourgame.js"></script>
+</head>
+<body onload="startFirstLevel();">
+	<h1>Rush Hour!</h1>
+	<select id="level" onchange="changeLevel(this.options[this.selectedIndex].value);">
+		<option selected="selected" value="1">Level 1</option>
+		<option value="2">Level 2</option>
+		<option value="3">Level 3</option>
+		<option value="4">Level 4</option>
+		<option value="5">Level 5</option>
+		<option value="40">Level 40</option>
+	</select>
+	<button id="reset" onclick="startLevel();">Reset</button> 
+
+	<canvas id="rushhour" width="600" height="600"></canvas>
+
+	<script>
+		var canvas = document.getElementById("rushhour");
+		var images = RushHourImages();
+		var rhg = RushHourGame(canvas, images);
+		var currentLevel = -1;
+
+		function changeLevel(value) {
+			currentLevel = value;
+			startLevel();
+		}
+
+		function startLevel() {
+			loadJSON(currentLevel, function (config) {
+				rhg.init(config);
+			});
+		}
+
+		function startFirstLevel() {
+			changeLevel(1);
+		}
+
+		function loadJSON(level, callback) {   
+		    var xobj = new XMLHttpRequest();
+		    xobj.overrideMimeType("application/json");
+		    xobj.open('GET', 'levels/level' + level + '.json', true); 
+
+		    xobj.onreadystatechange = function () {
+		          if (xobj.readyState == 4 && xobj.status == "200") {
+		            callback(xobj.responseText);
+		          }
+		    };
+		    xobj.send(null);  
+		};
+
+
+	</script>
+</body>
+</html>

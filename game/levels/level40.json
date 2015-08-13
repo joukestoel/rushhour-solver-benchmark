@@ -1,0 +1,30 @@
+{ 
+	"name":"Level 40",
+	"difficulty":"Expert",
+	"threeStars": 51,
+	"twoStars": 60,
+	"freeCells" : [
+		[3,0], [5,0],
+		[3,1],
+
+		[4,3],
+		[0,4], [1,4],
+		[5,5]
+	],
+	"vehicles" : [
+		{"img":"redCar", "initPos":[4,2], "size":2, "orient":"H"},
+		{"img":"lightGreenCar", "initPos":[2,0], "size":2, "orient":"H"},
+		{"img":"orangeCar", "initPos":[4,0], "size":2, "orient":"V"},
+		{"img":"blueCar", "initPos":[1,1], "size":2, "orient":"V"},
+		{"img":"pinkCar", "initPos":[2,1], "size":2, "orient":"V"},
+		{"img":"greenCar", "initPos":[2,4], "size":2, "orient":"V"},
+		{"img":"blackCar", "initPos":[5,4], "size":2, "orient":"H"},
+		{"img":"purpleCar", "initPos":[3,3], "size":2, "orient":"V"},
+		{"img":"yellowCar", "initPos":[4,5], "size":2, "orient":"H"},
+		{"img":"lightBrownCar", "initPos":[1,5], "size":2, "orient":"H"},
+
+		{"img":"purpleTruck", "initPos":[5,1], "size":3, "orient":"V"},
+		{"img":"blueTruck", "initPos":[2,3], "size":3, "orient":"H"},
+		{"img":"yellowTruck", "initPos":[0,0], "size":3, "orient":"V"}
+	]
+}
