@@ -86,9 +86,12 @@ header #road .startLeft {
 
 header #road .startRight {
 	animation: driveRightToLeft 10s linear infinite;
-	transform: rotate(180deg);
 	left: 110%;
 	top: 50px;
+}
+
+header #road .startRight img {
+	transform: rotate(180deg);
 }
 
 header #road #redCar {}
