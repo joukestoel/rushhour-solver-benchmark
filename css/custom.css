@@ -1,6 +1,8 @@
 header {
 	height: 270px;
 	background: linear-gradient(#B2E1EE, #00AFC1);
+	width: 100%;
+	position: relative;
 }
 
 header img#logo  {
@@ -61,116 +63,62 @@ header #road {
 	overflow-x: hidden;
 }
 
+header #road img {
+	height: 100%;
+}
+
 header #road #line {
 	position: relative;
 	top: 45px;
 	border: 2px dashed #fff;
 }
 
-header #road img#redCar {
+header #road .car {
 	position: absolute;
 	height: 40px;
-	left: 200%;
+	width: 100%;
+}
+
+header #road .startLeft {
 	animation: driveLeftToRight 10s linear infinite;
+	left: -150px;
 }
 
-header #road img#blueCar {
-	position: absolute;
-	height: 40px;
-	left: 200%;
-	animation: driveLeftToRight 10s linear infinite;
-	animation-delay: 2s;
-}
-
-header #road img#purpleTruck {
-	position: absolute;
-	height: 40px;
-	left: 200%;
-	animation: driveLeftToRight 10s linear infinite;
-	animation-delay: 2.5s;
-}
-
-header #road img#darkGreenCar {
-	position: absolute;
-	height: 40px;
-	left: 200%;
-	animation: driveLeftToRight 10s linear infinite;
-	animation-delay: 4s;
-}
-
-header #road img#yellowTruck {
-	position: absolute;
-	height: 40px;
-	left: 200%;
-	animation: driveLeftToRight 10s linear infinite;
-	animation-delay: 5s;
-}
-
-header #road img#greenTruck {
-	position: absolute;
-	height: 40px;
-	top: 50px;
-	left: -200px;
-	transform: rotate(180deg);
+header #road .startRight {
 	animation: driveRightToLeft 10s linear infinite;
+	transform: rotate(180deg);
+	left: 110%;
+	top: 50px;
 }
 
-header #road img#pinkCar {
-	position: absolute;
-	height: 40px;
-	top: 50px;
-	left: -200px;
-	transform: rotate(180deg);
-	animation: driveRightToLeft 10s linear infinite;
-	animation-delay: 1s;
-}
+header #road #redCar {}
+header #road #blueCar {animation-delay: 2s;}
+header #road #purpleTruck {animation-delay: 3s;}
+header #road #darkGreenCar {animation-delay: 5s;}
+header #road #yellowTruck {animation-delay: 8s;}
 
-header #road img#blackCar {
-	position: absolute;
-	height: 40px;
-	top: 50px;
-	left: -200px;
-	transform: rotate(180deg);
-	animation: driveRightToLeft 10s linear infinite;
-	animation-delay: 3s;
-}
-
-header #road img#blueTruck {
-	position: absolute;
-	height: 40px;
-	top: 50px;
-	left: -200px;
-	transform: rotate(180deg);
-	animation: driveRightToLeft 10s linear infinite;
-	animation-delay: 3.5s;
-}
-
-header #road img#purpleCar {
-	position: absolute;
-	height: 40px;
-	top: 50px;
-	left: -200px;
-	transform: rotate(180deg);
-	animation: driveRightToLeft 10s linear infinite;
-	animation-delay: 5s;
-}
+header #road #greenTruck {animation-delay: .5s;}
+header #road #pinkCar {animation-delay: 2.5s;}
+header #road #blackCar {animation-delay: 5.5s;}
+header #road #blueTruck {animation-delay: 7.5s;}
+header #road #purpleCar {animation-delay: 9s;}
 	
 
 @keyframes driveLeftToRight {
-	0% {
-		left: -200px;
+	from {
+		transform: translateX(0);
 	}
-	50%: {
-		left: 200%;
+	to {
+		transform: translateX(200%);
 	}
 }
 
 @keyframes driveRightToLeft {
-	0% {
-		left: 200%;
+	from {
+		transform: translateX(0);	
 	}
-	50%: {
-		left: -200px;
+	to {
+		transform: translateX(-200%);
 	}
 }
 
@@ -184,6 +132,9 @@ header #road img#purpleCar {
 }
 
 @media (max-width: 800px) {
+	header {
+		height: 240px;
+	}
 	header img#logo {
 		width: 500px;
 		left: -250px;
@@ -206,6 +157,23 @@ header #road img#purpleCar {
 
 	header #landscape img#right {
 		width: 400px;
+	}
+
+	header #road {
+		height: 60px;
+	}
+
+	header #road #line {
+		top: 30px;
+		border-width: 1px;
+	}
+
+	header #road .car {
+		height: 25px;
+	}
+
+	header #road .startRight {
+		top: 33px;
 	}
 }
 
