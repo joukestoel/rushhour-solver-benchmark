@@ -77,6 +77,7 @@ header #road .car {
 	position: absolute;
 	height: 40px;
 	width: 100%;
+	backface-visibility: hidden;
 }
 
 header #road .startLeft {
@@ -132,6 +133,12 @@ header #road #purpleCar {animation-delay: 9s;}
 	border-image: url(../img/h1_line.svg) 15;
 	border-bottom: 7px solid transparent;
 	border-top: 0; 
+}
+
+figcaption {
+	text-align: center;
+	font-size: 0.9em;
+	font-style: italic;
 }
 
 @media (max-width: 800px) {

@@ -65,9 +65,36 @@
     <div class="row">
       <div class="one-half column">
         <h4>Solving Rush Hour</h4>
-        <p>The purpose of this site is to give insight in how you could implement <a href="https://en.wikipedia.org/wiki/Transition_system" target="_new">state transition systems</a> in different general purpose solvers.</p>
+        <p>The purpose of this site is to give insight in how you could implement <a href="https://en.wikipedia.org/wiki/Model_checking" target="_new">model checking</a> of <href="https://en.wikipedia.org/wiki/Transition_system" target="_new">transition systems</a> in different (general purpose) solvers.
+        It aims to be the <a href="http://todomvc.com/" target="_new">TodoMVC</a> of model checking.</p>
+        <p>The game <a href="http://thinkfun.com/products/rush-hour/" target="_new">Rush Hour</a> is a perfect 'toy example' of a challenge that can be solved by model checking. It is a simple game with simple rules and a simple goal; get the red car out of the traffic jam! 
+        Next to this, a lot is known about its <a href="http://www.sciencedirect.com/science/article/pii/S0304397501001736" target="_new">complexity</a> and there are many different strategies one could follow to solve an instance of the game.</p>
+        <p>The game is complex enough to make it an interesting example. For instance, in <a href="http://link.springer.com/chapter/10.1007/978-3-540-75538-8_20" target="_new">the hardest configuration</a> it take 93 steps to get the red car to the exit.</p>
+      </div>
+
+      <div class="one-half column">
+        <figure>
+          <img src="img/rush_hour_puzzle.jpg" class="u-max-full-width"/>
+          <figcaption>The traditional table top game</figcaption>
+        </figure>
       </div>
     </div>
+
+    <div class="row">
+      <div class="column">
+        <h4>... But why would you want this?</h4>
+        <p>It is not so much on finding the best way to solve the game, or the quickest. It is about playing around with different solvers and different strategies to find out what works and what doesn't.</p>
+        
+        <p><a href="http://www.cwi.nl/people/stoel" target="_new">As a researcher</a> I am  interested in performing verification of (software) specifications. Solving Rush Hour is much like finding interesting properties in specifications. Of course there are differences and general specifications can easily become undecidable but for comparison Rush Hour speaks more to the imagination than some specification of let's say a banking system.</p>
+
+        <p>I am focussing on using <a href="https://en.wikipedia.org/wiki/Satisfiability_modulo_theories" target="_new">Satisfiability Modulo Theories</a> (SMT for short) solvers like <a href="https://github.com/Z3Prover/z3" target="new">Microsoft's Z3</a> to encode transition systems and there safety properties but I am also interested in how this could be implemented in different solvers.
+      </div>
+      <div class="offset-by-two eight columns">
+        <figure>
+          <img src="img/solving_rush_hour_comp_tree.gif" class="u-max-full-width"/>
+          <figcaption>A visualized solution instance as found by the solver by <a href="Henrik Theiling" target="_new">Henrik Theiling</a></figcaption>
+        </figure>
+      </div>
   </div>
 
 <!-- End Document
